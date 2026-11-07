@@ -484,13 +484,26 @@ function login() {
     }
 }
 
-function logout() {
+function login() {
 
-    document.getElementById("cvPage").style.display = "none";
+    let nim = document.getElementById("nim").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let jenjang = document.getElementById("jenjang").value;
 
-    document.getElementById("loginPage").style.display = "block";
+    if (nim === "2024140052" &&
+        password === "Iren17" &&
+        jenjang === "D4-Sarjana Terapan") {
 
-    document.getElementById("password").value = "";
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("cvPage").style.display = "grid";
+
+    } else {
+
+        document.getElementById("pesan").innerHTML =
+        "NIM, Password, atau jenjang pendidikan salah!";
+
+    }
+}
 
 }
 
