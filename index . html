@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Mahasiswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4a69bd, #1e3799);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-card {
+            background: #ffffff;
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .login-header {
+            background-color: #eb2f06;
+            color: #ffffff;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .login-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .login-header p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .login-body {
+            padding: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #2f3640;
+            margin-bottom: 8px;
+        }
+
+        .input-with-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-with-icon input,
+        .input-with-icon select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: #f5f6fa;
+        }
+
+        .input-with-icon input:focus,
+        .input-with-icon select:focus {
+            border-color: #eb2f06;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(235, 47, 6, 0.2);
+        }
+
+        .btn-login {
+            width: 100%;
+            background-color: #1e272e;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            background-color: #0b0f13;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="login-header">
+            <h2>Login Mahasiswa</h2>
+            <p>Masukkan data akun mahasiswa yang sesuai untuk membuka halaman Curriculum Vitae.</p>
+        </div>
+        <div class="login-body">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jenjang">Jenjang pendidikan</label>
+                    <div class="input-with-icon">
+                        <select id="jenjang" name="jenjang">
+                            <option value="" disabled selected>Pilih Jenjang</option>
+                            <option value="D3">D3 - Ahli Madya</option>
+                            <option value="D4">D4 - Sarjana Terapan</option>
+                            <option value="S1">S1 - Strata 1</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
