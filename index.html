@@ -63,6 +63,7 @@ body {
     border: 2px solid #ddd;
     border-radius: 12px;
     font-size: 17px;
+    margin-bottom: 15px;
 }
 
 .login-form button {
@@ -74,13 +75,8 @@ body {
     border-radius: 12px;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 25px;
+    margin-top: 15px;
     cursor: pointer;
-}
-
-.login-form button:hover {
-    background: #dcb85f;
-    color: black;
 }
 
 #pesan {
@@ -95,21 +91,21 @@ body {
     max-width: 950px;
     margin: 30px auto;
     grid-template-columns: 35% 65%;
-    background: #fffaf0;
-    box-shadow: 0 10px 30px #0002;
+    background: white;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 10px 30px #0002;
 }
 
 .sidebar {
-    background: #17191d;
+    background: #1d2228;
     color: white;
     padding: 30px 22px;
 }
 
 .photo {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
     border: 6px solid #dcb85f;
     border-radius: 50%;
     margin: 0 auto 35px;
@@ -124,14 +120,13 @@ body {
 }
 
 .bar {
-    background: linear-gradient(100deg,#f0d58e,#dcb85f);
+    background: #e5c276;
     color: #17191d;
     text-align: center;
     padding: 13px;
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 25px 0 20px;
     font-size: 19px;
-    font-weight: bold;
 }
 
 .details {
@@ -159,26 +154,26 @@ body {
 }
 
 .contact span {
-    color: #dcb85f;
+    color: #e5c276;
     margin-right: 8px;
 }
 
 .main {
     padding: 45px 35px;
-    background: #fffaf0;
+    background: white;
 }
 
 .name {
-    font-size: 45px;
+    font-size: 42px;
     font-weight: 900;
     color: #171c2a;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .subtitle {
     margin: 20px 0 30px;
     padding-bottom: 25px;
-    border-bottom: 2px solid #ded6c5;
+    border-bottom: 2px solid #ddd;
     color: #555b66;
     font-size: 18px;
     font-style: italic;
@@ -190,10 +185,10 @@ body {
 }
 
 .section-title {
-    background: linear-gradient(100deg,#f0d58e,#dcb85f);
+    background: #e5c276;
     color: #17191d;
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 25px;
     text-align: center;
     font-size: 19px;
     margin-bottom: 20px;
@@ -225,14 +220,12 @@ body {
     width: 14px;
     height: 14px;
     background: #dcb85f;
-    border: 2px solid #17191d;
     border-radius: 50%;
 }
 
 .school {
     font-size: 16px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .period {
@@ -257,11 +250,12 @@ footer {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin: 15px;
+    margin-top: 25px;
 }
 
-/* RESPONSIVE */
+/* TAMPILAN HP */
 @media(max-width:650px) {
+
     .login-container {
         margin: 20px 15px;
     }
@@ -281,16 +275,6 @@ footer {
 
     .name {
         font-size: 36px;
-    }
-}
-
-@media print {
-    .logout {
-        display: none;
-    }
-
-    .cv {
-        display: grid !important;
     }
 }
 </style>
@@ -320,6 +304,7 @@ footer {
         placeholder="Masukkan Password">
 
         <label>Jenjang pendidikan</label>
+
         <select id="jenjang">
             <option value="">Pilih jenjang pendidikan</option>
             <option value="D3">D3 - Diploma 3</option>
@@ -335,7 +320,7 @@ footer {
     </div>
 </div>
 
-<!-- HALAMAN CV -->
+<!-- HALAMAN CURRICULUM VITAE -->
 <div class="cv" id="cvPage">
 
     <aside class="sidebar">
@@ -385,8 +370,8 @@ footer {
         </h1>
 
         <p class="subtitle">
-            Mahasiswa D4 Sistem Informasi Bisnis<br>
-            AMIK Universal Medan
+            Mahasiswa D4 Sistem Informasi Bisnis
+            - AMIK Universal Medan
         </p>
 
         <section class="section">
@@ -394,19 +379,22 @@ footer {
             <h2 class="section-title">TENTANG SAYA</h2>
 
             <p class="about">
-                Saya merupakan mahasiswa aktif semester 5 Program
-                Studi D4 Sistem Informasi Bisnis di AMIK Universal
-                Medan. Saya tertarik mempelajari perkembangan
-                teknologi dan bagaimana teknologi dapat dimanfaatkan
-                untuk menyelesaikan berbagai permasalahan. Saya
-                senang mengeksplorasi hal-hal baru, terutama yang
-                berkaitan dengan komputer, pengolahan informasi,
-                dan pengembangan sistem. Saya juga memiliki
-                kemampuan bekerja sama, berkomunikasi dengan baik,
-                serta menyelesaikan tugas dengan penuh tanggung
-                jawab. Saya terus berusaha meningkatkan pengetahuan
-                dan keterampilan sebagai bekal untuk menghadapi
-                dunia kerja di masa depan.
+                Saya merupakan mahasiswa aktif semester 5
+                Program Studi D4 Sistem Informasi Bisnis
+                di AMIK Universal Medan. Saya tertarik
+                mempelajari perkembangan teknologi dan
+                bagaimana teknologi dapat dimanfaatkan
+                untuk menyelesaikan berbagai permasalahan.
+                Saya senang mengeksplorasi hal-hal baru,
+                terutama yang berkaitan dengan komputer,
+                pengolahan informasi, dan pengembangan
+                sistem. Saya juga memiliki kemampuan
+                bekerja sama, berkomunikasi dengan baik,
+                serta menyelesaikan tugas dengan penuh
+                tanggung jawab. Saya terus berusaha
+                meningkatkan pengetahuan dan keterampilan
+                sebagai bekal untuk menghadapi dunia kerja
+                di masa depan.
             </p>
 
         </section>
@@ -418,22 +406,39 @@ footer {
             <ul class="education">
 
                 <li>
-                    <div class="school">AMIK Universal Medan</div>
+                    <div class="school">
+                        AMIK Universal Medan
+                    </div>
                     <div class="period">
                         D4 Sistem Informasi Bisnis (Semester 5)
                     </div>
                 </li>
 
                 <li>
-                    <div class="school">SMA Negeri 02 Sipora</div>
+                    <div class="school">
+                        SMA Negeri 02 Sipora
+                    </div>
+                    <div class="period">
+                        Sekolah Menengah Atas
+                    </div>
                 </li>
 
                 <li>
-                    <div class="school">SMP Negeri 1 Siberut Utara</div>
+                    <div class="school">
+                        SMP Negeri 1 Siberut Utara
+                    </div>
+                    <div class="period">
+                        Sekolah Menengah Pertama
+                    </div>
                 </li>
 
                 <li>
-                    <div class="school">SD Negeri 15 Bojakan</div>
+                    <div class="school">
+                        SD Negeri 15 Bojakan
+                    </div>
+                    <div class="period">
+                        Sekolah Dasar
+                    </div>
                 </li>
 
             </ul>
@@ -452,6 +457,7 @@ footer {
 
 </div>
 
+<!-- JAVASCRIPT LOGIN -->
 <script>
 
 function login() {
@@ -462,7 +468,7 @@ function login() {
 
     if (
         nim === "2024140052" &&
-        password === "Irene27" &&
+        password === "Iren17" &&
         jenjang === "D4"
     ) {
 
