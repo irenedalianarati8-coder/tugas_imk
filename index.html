@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Mahasiswa & CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Profil CV - Irene Daliana Rati</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #4a69bd, #1e3799);
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,32 +25,34 @@
 
         .card {
             background: #ffffff;
-            width: 400px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             overflow: hidden;
         }
 
+        /* Login Section Styles */
         .login-header {
-            background-color: #eb2f06;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: #ffffff;
-            padding: 25px 20px;
+            padding: 30px 25px;
             text-align: center;
         }
 
         .login-header h2 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 5px;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .login-header p {
-            font-size: 12px;
+            font-size: 13px;
             opacity: 0.9;
+            line-height: 1.4;
         }
 
         .login-body {
-            padding: 25px;
+            padding: 30px 25px;
         }
 
         .form-group {
@@ -61,202 +63,238 @@
             display: block;
             font-size: 13px;
             font-weight: 600;
-            color: #2f3640;
+            color: #334155;
             margin-bottom: 8px;
         }
 
-        .input-with-icon input,
-        .input-with-icon select {
+        .input-wrapper input,
+        .input-wrapper select {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #dcdde1;
-            border-radius: 6px;
+            padding: 12px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
             font-size: 14px;
             outline: none;
             transition: all 0.3s ease;
-            background-color: #f5f6fa;
+            background-color: #f8fafc;
+            color: #1e293b;
         }
 
-        .input-with-icon input:focus,
-        .input-with-icon select:focus {
-            border-color: #eb2f06;
+        .input-wrapper input:focus,
+        .input-wrapper select:focus {
+            border-color: #2563eb;
             background-color: #fff;
-            box-shadow: 0 0 5px rgba(235, 47, 6, 0.2);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         }
 
         .btn-login {
             width: 100%;
-            background-color: #1e272e;
+            background-color: #2563eb;
             color: white;
             border: none;
-            padding: 12px;
+            padding: 14px;
             font-size: 15px;
             font-weight: 600;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             transition: background 0.3s ease;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         .btn-login:hover {
-            background-color: #0b0f13;
+            background-color: #1d4ed8;
         }
 
+        /* CV Section Styles */
         #halaman-cv {
-            background-color: #f8f9fa;
+            background-color: #f1f5f9;
             padding: 20px;
         }
 
-        .cv-header {
+        .cv-header-bar {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 15px;
+        }
+
+        .cv-header-bar span {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1e293b;
         }
 
         .btn-logout {
-            background-color: #eb2f06;
+            background-color: #ef4444;
             color: white;
             border: none;
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             cursor: pointer;
+            transition: background 0.2s;
         }
 
-        .cv-profile-box {
-            background: #2f3640;
+        .btn-logout:hover {
+            background-color: #dc2626;
+        }
+
+        .cv-hero {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
             color: #ffffff;
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 25px 20px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px auto;
         }
 
         .profile-img {
-            width: 110px;
-            height: 110px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            border: 4px solid #fbc531;
+            border: 3px solid #38bdf8;
             object-fit: cover;
+        }
+
+        .cv-hero h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .cv-hero p {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        .cv-section-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
             margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .section-title-btn {
-            background-color: #fbc531;
-            color: #2f3640;
-            font-weight: 600;
+        .section-title {
             font-size: 13px;
-            padding: 8px;
-            border-radius: 6px;
-            text-align: center;
-            margin: 15px 0;
+            font-weight: 700;
+            color: #2563eb;
+            text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        .cv-item {
-            font-size: 13px;
             margin-bottom: 12px;
-            text-align: center;
+            border-bottom: 2px solid #eff6ff;
+            padding-bottom: 6px;
         }
 
-        .cv-item span {
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .info-item span {
             display: block;
+            color: #64748b;
             font-size: 11px;
-            color: #dcdde1;
             margin-bottom: 2px;
         }
 
-        .cv-contact {
-            font-size: 13px;
-            margin-bottom: 10px;
+        .info-item strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .contact-row {
+            font-size: 12px;
+            color: #334155;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .cv-contact i {
-            color: #fbc531;
-            width: 20px;
+        .contact-row i {
+            color: #2563eb;
+            width: 16px;
         }
 
-        .cv-main-desc {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            color: #2f3640;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .cv-main-desc h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #1e272e;
-        }
-
-        .cv-main-desc h4 {
-            font-size: 13px;
-            color: #718093;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .cv-main-desc h5 {
-            font-size: 14px;
-            margin-top: 15px;
-            margin-bottom: 8px;
-            border-bottom: 2px solid #2f3640;
-            padding-bottom: 4px;
-        }
-
-        .cv-main-desc p {
+        .desc-text {
             font-size: 12px;
             line-height: 1.6;
-            color: #57606f;
-            margin-bottom: 10px;
+            color: #475569;
+            text-align: justify;
         }
 
-        .cv-main-desc ul {
-            padding-left: 20px;
+        .edu-list {
+            list-style: none;
             font-size: 12px;
-            color: #57606f;
-            line-height: 1.5;
         }
 
-        .cv-main-desc li {
-            margin-bottom: 4px;
+        .edu-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            color: #475569;
+        }
+
+        .edu-list li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+
+        .edu-list strong {
+            color: #1e293b;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
+        <!-- Halaman Login -->
         <div id="form-login">
             <div class="login-header">
-                <h2>Login Mahasiswa</h2>
-                <p>Masukkan data akun mahasiswa yang sesuai untuk membuka halaman Curriculum Vitae.</p>
+                <h2>Portal Mahasiswa</h2>
+                <p>Silakan masukkan informasi akun Anda untuk mengakses halaman Curriculum Vitae.</p>
             </div>
             <div class="login-body">
                 <form id="loginForm" onsubmit="handleLogin(event)">
                     <div class="form-group">
-                        <label for="nim">NIM</label>
-                        <div class="input-with-icon">
-                            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                        <label for="nim">NIM Mahasiswa</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="nim" name="nim" placeholder="Contoh: 2024140052" required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="input-with-icon">
-                            <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+                        <label for="password">Kata Sandi</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Masukkan password" required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="jenjang">Jenjang pendidikan</label>
-                        <div class="input-with-icon">
+                        <label for="jenjang">Jenjang Pendidikan</label>
+                        <div class="input-wrapper">
                             <select id="jenjang" name="jenjang" required>
-                                <option value="" disabled selected>Pilih Jenjang</option>
+                                <option value="" disabled selected>Pilih jenjang studi</option>
                                 <option value="D3">D3 - Ahli Madya</option>
                                 <option value="D4">D4 - Sarjana Terapan</option>
                                 <option value="S1">S1 - Strata 1</option>
@@ -264,47 +302,91 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn-login">Login</button>
+                    <button type="submit" class="btn-login">Masuk ke Profil</button>
                 </form>
             </div>
         </div>
 
+        <!-- Halaman CV (Tersembunyi Awalnya) -->
         <div id="halaman-cv" style="display: none;">
-            <div class="cv-header">
-                <button type="button" class="btn-logout" onclick="handleLogout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            <div class="cv-header-bar">
+                <span>Curriculum Vitae</span>
+                <button type="button" class="btn-logout" onclick="handleLogout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</button>
             </div>
             
-            <div class="cv-profile-box">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Foto Profil" class="profile-img">
-                
-                <div class="section-title-btn">DATA DIRI</div>
-                
-                <div class="cv-item">
-                    <span>NIM</span>
-                    <strong>2024140052</strong>
+            <div class="cv-hero">
+                <div class="profile-img-container">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400" alt="Foto Profil Irene" class="profile-img">
                 </div>
-                <div class="cv-item">
-                    <span>Tempat / Tanggal Lahir</span>
-                    <strong>Bojakan, 17 April 2004</strong>
-                </div>
-                <div class="cv-item">
-                    <span>Jenis Kelamin</span>
-                    <strong>Perempuan</strong>
-                </div>
-                <div class="cv-item">
-                    <span>Status</span>
-                    <strong>Mahasiswa</strong>
-                </div>
-                <div class="cv-item">
-                    <span>Kewarganegaraan</span>
-                    <strong>Indonesia</strong>
-                </div>
-
-                <div class="section-title-btn">KONTAK</div>
-                <div class="cv-contact"><i class="fa-solid fa-phone"></i> 081293246394</div>
-                <div class="cv-contact"><i class="fa-solid fa-envelope"></i> irenedalianarati8@gmail.com</div>
+                <h3>IRENE DALIANA RATI</h3>
+                <p>Mahasiswa D4 Sistem Informasi Bisnis<br>AMIK Universal Medan</p>
             </div>
 
-            <div class="cv-main-desc">
-                <h3>IRENE DALIANA RATI</h3>
-                <h4>
+            <div class="cv-section-card">
+                <div class="section-title">Informasi Pribadi</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span>NIM</span>
+                        <strong>2024140052</strong>
+                    </div>
+                    <div class="info-item">
+                        <span>Jenis Kelamin</span>
+                        <strong>Perempuan</strong>
+                    </div>
+                </div>
+                <div class="info-grid" style="margin-bottom: 0;">
+                    <div class="info-item" style="grid-column: span 2;">
+                        <span>Tempat / Tanggal Lahir</span>
+                        <strong>Bojakan, 17 April 2004</strong>
+                    </div>
+                </div>
+                <div class="info-grid" style="margin-top: 10px;">
+                    <div class="info-item">
+                        <span>Status</span>
+                        <strong>Mahasiswa</strong>
+                    </div>
+                    <div class="info-item">
+                        <span>Kewarganegaraan</span>
+                        <strong>Indonesia</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section-card">
+                <div class="section-title">Kontak & Perpesanan</div>
+                <div class="contact-row"><i class="fa-solid fa-phone"></i> 081293246394</div>
+                <div class="contact-row" style="margin-bottom: 0;"><i class="fa-solid fa-envelope"></i> irenedalianarati8@gmail.com</div>
+            </div>
+
+            <div class="cv-section-card">
+                <div class="section-title">Tentang Saya</div>
+                <p class="desc-text">Saya merupakan mahasiswa aktif semester 5 Program Studi D4 Sistem Informasi Bisnis di AMIK Universal Medan. Saya tertarik mempelajari perkembangan teknologi dan bagaimana teknologi dapat dimanfaatkan untuk menyelesaikan berbagai permasalahan. Saya senang mengeksplorasi hal-hal baru, terutama yang berkaitan dengan komputer, pengolahan informasi, dan pengembangan sistem. Saya juga memiliki kemampuan bekerja sama, berkomunikasi dengan baik, serta menyelesaikan tugas dengan penuh tanggung jawab. Saya terus berusaha meningkatkan pengetahuan dan keterampilan sebagai bekal untuk menghadapi dunia kerja di masa depan.</p>
+            </div>
+
+            <div class="cv-section-card" style="margin-bottom: 0;">
+                <div class="section-title">Riwayat Pendidikan</div>
+                <ul class="edu-list">
+                    <li><strong>AMIK Universal Medan</strong> (Semester 5)</li>
+                    <li><strong>SMA Negeri 02 Sipora</strong></li>
+                    <li><strong>SMP Negeri 1 Siberut Utara</strong></li>
+                    <li><strong>SD Negeri 15 Bojakan</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); 
+            document.getElementById('form-login').style.display = 'none';
+            document.getElementById('halaman-cv').style.display = 'block';
+        }
+
+        function handleLogout() {
+            document.getElementById('halaman-cv').style.display = 'none';
+            document.getElementById('form-login').style.display = 'block';
+            document.getElementById('loginForm').reset();
+        }
+    </script>
+</body>
+</html>
